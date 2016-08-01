@@ -1,0 +1,30 @@
+{
+  "name": "frontend-dev-exercises",
+  "version": "1.0.0",
+  "description": "Welcome to the RTI Center for Data Science front-end developer exercise! This exercise is here to get you acquainted with a small sample of what we do and for us to get acquainted with your skills. It should take no more than two hours of your time.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --watch --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkHarper/frontend-dev-exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkHarper/frontend-dev-exercises/issues"
+  },
+  "homepage": "https://github.com/MarkHarper/frontend-dev-exercises#readme",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "html-webpack-plugin": "^2.22.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
