@@ -1,0 +1,15 @@
+body {
+  font: 10px sans-serif;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.axis path {
+  display: none;
+}
