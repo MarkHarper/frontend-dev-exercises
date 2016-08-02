@@ -4,9 +4,9 @@ import data from './census.csv'
 
 let options1 = {
     margin: { top: 20, 
-        right: 60, 
+        right: 40, 
         bottom: 30, 
-        left: 40
+        left: 150
     },
     width: 856,
     height: 426,
@@ -31,22 +31,26 @@ eduData.push(filteredForEdu['Professional school']);
 
 stackedBar('.edu-bar', eduData, options1);
 
-// filter data for attribute
-function filterForAttr (data, options) {
-    let obj = {};
-    data.forEach(function(el, i, arr) {
-        if (obj[el[options.attr]]) {
-            if (el[options.a] === '1') {
-                obj[el[options.attr]][options.a]++;
-            } else {
-                obj[el[options.attr]][options.b]++;
-            }
-        } else {
-            obj[el[options.attr]] = {};
-            obj[el[options.attr]].name = el[options.attr]
-            obj[el[options.attr]][options.a] = el[options.a] === '1' ? 1 : 0;
-            obj[el[options.attr]][options.b] = el[options.a] === '1' ? 1 : 0;
-        }
-    });
-    return obj;
+let options2 = {
+    margin: { top: 20, 
+        right: 20, 
+        bottom: 30, 
+        left: 150
+    },
+    width: 856,
+    height: 426,
+    attr: 'race',
+    a: 'over_50k',
+    b: 'under_50k'
 }
+
+// filter data for race
+let filteredForRace = filterForAttr(data, options2); 
+
+// push data for race to an array
+let raceData = [];
+for (var i in filteredForRace) {
+    raceData.push(filteredForRace[i]);
+}
+
+stackedBar('.race-bar', raceData, options2);
