@@ -1,3 +1,10 @@
+## Instructions for this implementation
+
+1. Clone this repository
+2. run 'npm install'
+3. run 'npm run start'
+4. view on localhost at 8080
+
 ## RTI CDS Frontend Developer Exercise
 
 Welcome to the RTI Center for Data Science front-end developer exercise! This exercise is here to get you acquainted with a small sample of what we do and for us to get acquainted with your skills. It should take no more than two hours of your time.
