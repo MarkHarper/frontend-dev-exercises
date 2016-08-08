@@ -54,3 +54,23 @@ for (var i in filteredForRace) {
 }
 
 stackedBar('.race-bar', raceData, options2);
+
+// filter data for attribute
+function filterForAttr (data, options) {
+    let obj = {};
+    data.forEach(function(el, i, arr) {
+        if (obj[el[options.attr]]) {
+            if (el[options.a] === '1') {
+                obj[el[options.attr]][options.a]++;
+            } else {
+                obj[el[options.attr]][options.b]++;
+            }
+        } else {
+            obj[el[options.attr]] = {};
+            obj[el[options.attr]].name = el[options.attr]
+            obj[el[options.attr]][options.a] = el[options.a] === '1' ? 1 : 0;
+            obj[el[options.attr]][options.b] = el[options.a] === '1' ? 1 : 0;
+        }
+    });
+    return obj;
+}
